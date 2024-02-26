@@ -1,9 +1,9 @@
 //
-// Created by eduard on 26.02.24.
+// Created by Admin on 26.02.24.
 //
 
-#ifndef PIZDA_EXPENSE_H
-#define PIZDA_EXPENSE_H
+#ifndef LABA2OOP_EXPENSE_H
+#define LABA2OOP_EXPENSE_H
 #include <string>
 using namespace std;
 class Expense {
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //PIZDA_EXPENSE_H
+#endif //LABA2OOP_EXPENSE_H

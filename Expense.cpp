@@ -1,5 +1,5 @@
 //
-// Created by eduard on 26.02.24.
+// Created by Admin on 26.02.24.
 //
 
 #include "Expense.h"

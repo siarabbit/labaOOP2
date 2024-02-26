@@ -1,9 +1,9 @@
 //
-// Created by eduard on 26.02.24.
+// Created by Admin on 26.02.24.
 //
 
-#ifndef PIZDA_BUDGET_H
-#define PIZDA_BUDGET_H
+#ifndef LABA2OOP_BUDGET_H
+#define LABA2OOP_BUDGET_H
 
 
 #include <vector>
@@ -16,9 +16,9 @@ private:
 public:
     Budget(vector<Expense>newBudget = {});
     void addExpense(const Expense& expense);
-    double getTotalExpenses();
+    void getTotalExpenses();
     ~Budget();
 };
 
 
-#endif //PIZDA_BUDGET_H
+#endif //LABA2OOP_BUDGET_H
