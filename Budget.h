@@ -17,6 +17,9 @@ public:
     Budget(vector<Expense>newBudget = {});
     void addExpense(const Expense& expense);
     void getTotalExpenses();
+    Budget(const Budget &other);
+    Budget(Budget &&other);
+
     ~Budget();
 };
 

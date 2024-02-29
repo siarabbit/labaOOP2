@@ -18,5 +18,11 @@ void Budget::getTotalExpenses() {
 Budget::Budget(vector<Expense> newBudget)
     :expenses{newBudget}{}
 
+Budget::Budget(const Budget& other)
+        :expenses(other.expenses){};
+Budget::Budget(Budget &&other)
+        :expenses(other.expenses){
+    other.expenses = {};
+}
 
 Budget::~Budget() {}

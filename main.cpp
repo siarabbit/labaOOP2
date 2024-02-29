@@ -30,6 +30,7 @@ int main() {
     Savings mySavings(300);
     bool isWorking = true;
 
+
     while (isWorking){
         int choice = 0;
         cout<<"\nWelcome to Budget Tracker"<<endl;
@@ -69,6 +70,6 @@ int main() {
         }
     }
 
-
+    Budget extraBudget = move(myBudget);
     return 0;
 }

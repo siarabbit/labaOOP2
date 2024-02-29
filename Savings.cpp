@@ -27,4 +27,4 @@ void Savings::withdraw(double amount) {
 double Savings::getBalance() {
     return balance;
 }
-
+Savings::~Savings(){}
