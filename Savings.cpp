@@ -12,19 +12,19 @@ void Savings::deposit(double amount) {
     if(amount<=0){
         cout<<"You cant deposit 0 or less dollars"<<endl;
     }else{
-        balance += amount;
+        this->balance += amount;
     }
 }
 
 void Savings::withdraw(double amount) {
-    if(balance < amount){
+    if(this->balance < amount){
         cout<<"Cant proceed the withdraw. Low balance!"<<endl;
     }else{
-        balance -= amount;
+       this->balance -= amount;
     }
 }
 
-double Savings::getBalance() {
-    return balance;
+double Savings::getBalance() const{
+    return this->balance;
 }
 Savings::~Savings(){}

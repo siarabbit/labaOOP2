@@ -14,7 +14,7 @@ public:
     Savings(double newBalance = 0);
     void deposit(double amount);
     void withdraw(double amount);
-    double getBalance();
+    double getBalance() const;
     ~Savings();
 };
 
