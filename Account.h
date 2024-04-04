@@ -17,6 +17,8 @@ public:
     double getBalance() const;
     void deposit(double amount);
     void withdraw(double amount);
+    Account(Account&& other);
+    Account& operator = (Account& other);
     Account(double newBalance = 0);
     ~Account();
 };

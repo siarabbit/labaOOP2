@@ -29,3 +29,15 @@ Account::Account(double newBalance)
 Account::~Account() {
 
 }
+Account &Account::operator=(Account &other) {
+    if(this == &other){
+        return this;
+    }
+    this->balance = other.balance;
+    returnthis;
+}
+
+Account::Account(Account&& other)
+        :balance(other.balance){
+    other.balance = 0;
+}
