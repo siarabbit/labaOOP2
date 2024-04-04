@@ -21,3 +21,11 @@ void Account::deposit(double amount) {
 double Account::getBalance() const {
     return this->balance;
 }
+Account::Account(double newBalance)
+        :balance(newBalance){
+
+}
+
+Account::~Account() {
+
+}

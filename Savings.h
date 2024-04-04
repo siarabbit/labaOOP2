@@ -6,18 +6,15 @@
 #define LABA2OOP_SAVINGS_H
 
 #include <ostream>
-
+#include "Account.h"
 using namespace std;
 
-class Savings {
+class Savings : public Account{
 private:
-    double balance;
+    double interestRate;
 public:
-    Savings(double newBalance = 0);//c
-    void deposit(double amount);
-    void withdraw(double amount);
-    friend ostream &operator << (ostream &output, Savings &p);// дружній оператор 7.
-    double getBalance() const;// каже функції нічого не змінювати
+    double getInterestRate() const;
+    Savings(double newBalance,double newInterestRate);
     ~Savings();
 };
 
