@@ -13,6 +13,8 @@ class Savings : public Account{
 private:
     double interestRate;
 public:
+    Savings(Savings&& other);
+    Savings& operator = (Savings& other);
     double getInterestRate() const;
     Savings(double newBalance,double newInterestRate);
     ~Savings();

@@ -15,3 +15,16 @@ Savings::~Savings() {}
 double Savings::getInterestRate() const {
     return this->interestRate;
 }
+Savings &Savings::operator=(Savings &other){
+    if(this == &other){
+        return this;
+    }
+    Account::operator=(other);
+    this->interestRate = other.interestRate;
+    returnthis;
+}
+
+Savings::Savings(Savings &&other)
+        : Account (std::move(other)),interestRate(other.interestRate){
+    this->interestRate = 0;
+}

@@ -27,7 +27,7 @@ using namespace std;
 int main() {
 
     Budget myBudget;
-    Savings mySavings(300);
+    Savings mySavings(300,1.2);
     bool isWorking = true;
 
 
@@ -41,7 +41,8 @@ int main() {
               "\n4: Deposit to savings"
               "\n5: Withdraw from savings"
               "\n6: Delete last expense"
-              "\n7: Exit"
+              "\n7: Show Interest Rate"
+              "\n8: Exit"
               "\nYour choice: ";
         cin>>choice;
         switch (choice) {
@@ -52,7 +53,7 @@ int main() {
                 myBudget.getTotalExpenses();
                 break;
             case 3:
-                cout<<mySavings;
+                cout<<"\nBalance: "<<mySavings.getBalance()<<endl;
                 break;
             case 4:
                 cout<<"Enter amount that you want deposit: ";
@@ -66,7 +67,10 @@ int main() {
             case 6:
                 -myBudget;
                 break;
-            case 7: //додає останню витрату бюджету
+            case 7:
+                cout<<"Interest Rate: "<<mySavings.getInterestRate()<<endl;
+                break;
+            case 8:
                 isWorking = false;
                 break;
             default:
