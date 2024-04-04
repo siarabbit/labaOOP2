@@ -14,11 +14,13 @@ class Budget {
 private:
     vector<Expense> expenses;
 public:
-    Budget(vector<Expense>newBudget = {});
+    Budget(vector<Expense>newBudget = {});//c
     void addExpense(const Expense& expense);
     void getTotalExpenses();
-    Budget(const Budget &other);
-    Budget(Budget &&other);
+    Budget(const Budget &other);//copy
+    Budget(Budget &&other);//move cons
+
+    void operator -();//унарний
 
     ~Budget();
 };

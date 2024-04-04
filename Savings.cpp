@@ -5,14 +5,14 @@
 #include "Savings.h"
 #include <iostream>
 using namespace std;
-Savings::Savings(double newBalance)
+Savings::Savings(double newBalance)// конст с параметрами за замовчуванням
         :balance{newBalance}{}
 
 void Savings::deposit(double amount) {
     if(amount<=0){
         cout<<"You cant deposit 0 or less dollars"<<endl;
     }else{
-        this->balance += amount;
+        this->balance += amount;// звертається до полів класу
     }
 }
 
@@ -24,7 +24,12 @@ void Savings::withdraw(double amount) {
     }
 }
 
-double Savings::getBalance() const{
+double Savings::getBalance() const{ //
     return this->balance;
 }
 Savings::~Savings(){}
+
+ostream &operator<<(ostream &output, Savings &p) {
+    output<<"\nBalance: "<<p.getBalance()<<endl;
+    return output;
+}

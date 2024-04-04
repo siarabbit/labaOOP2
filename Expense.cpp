@@ -4,7 +4,7 @@
 
 #include "Expense.h"
 
-Expense::Expense() {}
+Expense::Expense() {}// делегування, викликає наступний конструктор
 
 Expense::Expense(string newCategory, double newAmount)
     :category{newCategory},amount{newAmount}{}

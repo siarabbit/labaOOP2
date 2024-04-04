@@ -12,7 +12,7 @@ private:
     double amount;
 public:
     Expense();
-    Expense(string newCategory,double newAmount);
+    Expense(string newCategory,double newAmount);//c
 
     string getCategory();
     double getAmount();

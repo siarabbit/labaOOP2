@@ -40,7 +40,8 @@ int main() {
               "\n3: Show saving balance"
               "\n4: Deposit to savings"
               "\n5: Withdraw from savings"
-              "\n6: Exit"
+              "\n6: Delete last expense"
+              "\n7: Exit"
               "\nYour choice: ";
         cin>>choice;
         switch (choice) {
@@ -51,17 +52,21 @@ int main() {
                 myBudget.getTotalExpenses();
                 break;
             case 3:
-                cout<<"\nBalance: "<<mySavings.getBalance()<<endl;
+                cout<<mySavings;
                 break;
             case 4:
                 cout<<"Enter amount that you want deposit: ";
                 mySavings.deposit(savingsAction());
+
                 break;
             case 5:
                 cout<<"Enter amount that you want to withdraw: ";
                 mySavings.withdraw(savingsAction());
                 break;
             case 6:
+                -myBudget;
+                break;
+            case 7: //додає останню витрату бюджету
                 isWorking = false;
                 break;
             default:
@@ -70,6 +75,6 @@ int main() {
         }
     }
 
-    Budget extraBudget = move(myBudget);
+    Budget extraBudget = move(myBudget); //move const
     return 0;
 }

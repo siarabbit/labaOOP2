@@ -9,4 +9,6 @@ add_executable(laba2OOP main.cpp
         Budget.cpp
         Budget.h
         Savings.cpp
-        Savings.h)
+        Savings.h
+        Account.cpp
+        Account.h)

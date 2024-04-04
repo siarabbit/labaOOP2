@@ -5,16 +5,19 @@
 #ifndef LABA2OOP_SAVINGS_H
 #define LABA2OOP_SAVINGS_H
 
+#include <ostream>
+
 using namespace std;
 
 class Savings {
 private:
     double balance;
 public:
-    Savings(double newBalance = 0);
+    Savings(double newBalance = 0);//c
     void deposit(double amount);
     void withdraw(double amount);
-    double getBalance() const;
+    friend ostream &operator << (ostream &output, Savings &p);// дружній оператор 7.
+    double getBalance() const;// каже функції нічого не змінювати
     ~Savings();
 };
 

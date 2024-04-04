@@ -16,13 +16,17 @@ void Budget::getTotalExpenses() {
 }
 
 Budget::Budget(vector<Expense> newBudget)
-    :expenses{newBudget}{}
+    :expenses{newBudget}{}//c
 
-Budget::Budget(const Budget& other)
+Budget::Budget(const Budget& other)// copy const
         :expenses(other.expenses){};
-Budget::Budget(Budget &&other)
+Budget::Budget(Budget &&other)// move const
         :expenses(other.expenses){
     other.expenses = {};
 }
+void Budget::operator-() {//унарний оператор, прибирає останню витрату з Budget
+    this->expenses.erase(this->expenses.end());
+    cout<<"Deleted"<<endl;
 
+}
 Budget::~Budget() {}
