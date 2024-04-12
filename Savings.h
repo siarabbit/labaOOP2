@@ -14,9 +14,9 @@ private:
     double balance;
     double interestRate;
 public:
-    double getBalance() const override;
-    void deposit(double amount) override;
-    void withdraw(double amount) override;
+    double getBalance() const override final;
+    void deposit(double amount) override final ;
+    void withdraw(double amount) override final;
     Savings(Savings&& other);
     Savings& operator = (Savings& other);
     double getInterestRate() const;
