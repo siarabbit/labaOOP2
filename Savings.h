@@ -21,7 +21,7 @@ public:
     Savings& operator = (Savings& other);
     double getInterestRate() const;
     Savings(double newBalance,double newInterestRate);//конст
-    ~Savings();//дест
+    virtual ~Savings();//дест
 };
 
 
