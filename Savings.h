@@ -17,7 +17,6 @@ public:
     double getBalance() const override;
     void deposit(double amount) override;
     void withdraw(double amount) override;
-
     Savings(Savings&& other);
     Savings& operator = (Savings& other);
     double getInterestRate() const;
