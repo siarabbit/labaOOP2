@@ -7,7 +7,7 @@
 using namespace std;
 
 Savings::Savings(double newBalance,double newInterestRate) :
-        Account(newBalance), interestRate(newInterestRate) {
+        balance(newBalance), interestRate(newInterestRate) {
 }
 
 Savings::~Savings() {}
@@ -15,16 +15,36 @@ Savings::~Savings() {}
 double Savings::getInterestRate() const {
     return this->interestRate;
 }
-Savings &Savings::operator=(Savings &other){
+Savings &Savings::operator=(Savings &other){//перевизначання op
     if(this == &other){
-        return this;
+        return *this;
     }
-    Account::operator=(other);
+    this->balance = other.balance;
     this->interestRate = other.interestRate;
-    returnthis;
+    return *this;
 }
 
-Savings::Savings(Savings &&other)
-        : Account (std::move(other)),interestRate(other.interestRate){
+Savings::Savings(Savings &&other)//перевизначання move
+        : balance(other.balance),interestRate(other.interestRate){
+    this->balance = 0;
     this->interestRate = 0;
+}
+
+double Savings::getBalance() const {
+    return this->balance;
+}
+
+void Savings::deposit(double amount) {
+    if(amount > 0){
+        this->balance = this->balance + amount;
+    }
+}
+
+void Savings::withdraw(double amount) {
+    if(amount < this->balance){
+        this->balance = this->balance - amount;
+    }else{
+        cout<<"Invalid amount to withdraw"<<endl;
+    }
+
 }

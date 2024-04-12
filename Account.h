@@ -11,16 +11,11 @@
 
 using namespace std;
 class Account {
-private:
-    double balance;
 public:
-    double getBalance() const;
-    void deposit(double amount);
-    void withdraw(double amount);
-    Account(Account&& other);
-    Account& operator = (Account& other);
-    Account(double newBalance = 0);
-    ~Account();
+    virtual double getBalance() const = 0;
+    virtual void deposit(double amount) = 0;
+    virtual void withdraw(double amount) = 0;
+
 };
 
 

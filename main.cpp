@@ -27,7 +27,7 @@ using namespace std;
 int main() {
 
     Budget myBudget;
-    Savings mySavings(300,1.2);
+    Savings mySavings(300,1.5);
     bool isWorking = true;
 
 
